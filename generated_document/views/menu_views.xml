@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Azione -->
+        
+        <record id="document_template_route_action" model="ir.actions.act_window">
+            <field name="name">Generazione documenti</field>
+            <field name="res_model">document.template</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+
+        <menuitem id="generated_document_menu"
+            name="Generazione Documenti"
+            action="document_template_route_action"
+            sequence="2"/>
+
+    </data>
+</odoo>    

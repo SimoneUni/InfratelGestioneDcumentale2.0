@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+access_document_configuration,document.configuration,model_document_configuration,,1,1,1,1
+access_generated_documents,generated.documents,model_generated_documents,,1,1,1,1
+access_document_all,document.all,model_document_all,,1,1,1,1
+access_document_lines,document.lines,model_document_lines,,1,1,1,1

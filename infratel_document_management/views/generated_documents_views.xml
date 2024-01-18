@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ********************** MODELLO generated.documents ********************** -->
+        <!-- form view -->
+        <!-- <record id="generated_documents_form_view" model="ir.ui.view">
+            <field name="name">generated.documents.form.view</field>
+            <field name="model">generated.documents</field>
+            <field name="arch" type="xml">
+                <form string="Generated Documents form"> 
+                    <button class="oe_stat_button" icon="fa-folder-open" type="object" name="action_view_partner_all_documents">
+                        <field string="Documenti appartenenti" name="documents_count" widget="statinfo"/>
+                    </button> 
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="list_document"/>
+                                <field name="category_document"/>
+                            </group>
+                        </group>
+                        <notebook>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record> -->
+
+        <!-- form view da copiare -->
+        <record id="generated_documents_form_view" model="ir.ui.view">
+            <field name="name">generated.documents.form.view</field>
+            <field name="model">generated.documents</field>
+            <field name="arch" type="xml">
+                <form string="Generated Documents form"> 
+                    <button class="oe_stat_button" icon="fa-folder-open" type="object" name="action_view_partner_all_documents">
+                        <field string="Documenti appartenenti" name="documents_count" widget="statinfo"/>
+                    </button> 
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                        <notebook>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <!-- <record id="generated_documents_tree_view" model="ir.ui.view">
+            <field name="name">generated.documents.tree.view</field>
+            <field name="model">generated.documents</field>
+            <field name="arch" type="xml">
+                <tree string="Generated Documents tree">
+                    <field name="list_document"/>
+                    <field name="category_document"/>
+                </tree>
+            </field>
+        </record> -->
+
+        <!-- tree view da copiare-->
+        <record id="generated_documents_tree_view" model="ir.ui.view">
+            <field name="name">generated.documents.tree.view</field>
+            <field name="model">generated.documents</field>
+            <field name="arch" type="xml">
+                <tree string="Generated Documents tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+         
+    </data>
+</odoo>

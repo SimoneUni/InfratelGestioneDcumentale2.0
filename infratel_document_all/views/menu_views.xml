@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    <!-- ******************************* ACTIONS ******************************* -->
+
+        <!-- document.all action -->
+        <record id="document_all_action" model="ir.actions.act_window">
+            <field name="name">Tipologie documenti</field>
+            <field name="res_model">document.all</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        
+
+        
+
+        
+        
+    <!-- ******************************* MENU ******************************* -->
+
+        <!-- document.all menu (livello 2) -->
+        <menuitem id="all_document_menu"
+            name="Tipologie Documenti"
+            parent="infratel_document_management.configuration_menu"
+            action="document_all_action"
+            sequence="3"/>
+
+        
+    </data>
+</odoo>

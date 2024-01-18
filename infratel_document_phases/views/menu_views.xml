@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ******************************* ACTIONS ******************************* -->
+
+        <!-- document.phases action -->
+        <record id="documents_phases_action" model="ir.actions.act_window">
+            <field name="name">Fasi</field>
+            <field name="res_model">document.phases</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+            
+        <!-- ******************************* MENU ******************************* -->
+
+        <!-- document.phases menu (livello 2) -->
+
+        <menuitem id="documents_phases_menu"
+            name="Fasi documenti"
+            parent="infratel_document_management.configuration_menu"
+            action="documents_phases_action"
+            sequence="2"/>
+    </data>
+</odoo>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ********************** MODELLO all.documents ********************** -->
+        <!-- form view inherit -->
+        <record id="document_all_form_view" model="ir.ui.view">
+            <field name="name">document.all.form.view</field>
+            <field name="model">document.all</field>
+            <field name="inherit_id" ref="infratel_document_all.document_all_form_view"/>
+            <field name="arch" type="xml">
+                <!-- <header>
+                    <button string="Esegui Parsing" type="object" class="oe_highlight" name="parse_and_update_html"/>
+                </header> -->
+                
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="document_category"/>
+                    <field name="code_deal"/>
+                    <field name="pippi" invisible='True'/>
+                    <button string="Esegui Parsing" type="object" class="oe_highlight" name="parse_and_update_html"/>
+                    <!-- <field name="type_documents_rel"/> -->
+                </xpath>
+                <notebook>
+                    <!-- <page string="Voci">
+                        <group>
+                            <group>
+                                <field name="code_deal"/>
+                                <field name="point_a"/>
+                                <field name="point_z"/>
+                                <field name="contract_name"/>
+                                <field name="date_contract"/>
+                                <field name="cig"/>
+                                <field name="cup"/>
+                            </group>
+                            <group>
+                                <field name="shop_assistant_code"/>
+                                <field name="contracting_entity"/>
+                                <field name="dl"/>
+                                <field name="contracting_company"/>
+                                <field name="netAmount_WorksContract"/>
+                                <field name="approval_date_oda"/>
+                                <field name="approval_date_frameworkAgreement"/>
+                                <field name="deadline"/>
+                            </group>
+                        </group>
+                    </page> -->
+                    <page string="Testo">
+                        <field  name="nome_campo_html"/>
+                        <field  name="nome_campo_html_2"/>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <!-- tree view inherit -->
+        <record id="document_all_tree_view" model="ir.ui.view">
+            <field name="name">document.all.tree.view</field>
+            <field name="model">document.all</field>
+            <field name="inherit_id" ref="infratel_document_all.document_all_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="document_category"/>
+                    <!-- <field name="type_documents_rel"/> -->
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

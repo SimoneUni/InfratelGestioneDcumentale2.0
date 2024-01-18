@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    <!-- ******************************* ACTIONS ******************************* -->
+
+        <!-- document list action -->
+        <record id="document_list_route_action" model="ir.actions.act_window">
+            <field name="name">Elenco di documenti</field>
+            <field name="res_model">document.list</field>
+            <field name="view_mode">tree,form</field>
+        </record>      
+
+    <!-- ******************************* MENU ******************************* -->
+
+        <!-- document list menu -->
+        <menuitem id="document_list_menu"
+            name="Elenco Documenti"
+            action="document_list_route_action"
+            sequence="1"/>
+            
+       
+        
+    </data>
+</odoo>

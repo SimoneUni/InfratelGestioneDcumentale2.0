@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ********************** MODELLO all.documents ********************** -->
+        <!-- form view -->
+        <record id="file_parsing_form_view" model="ir.ui.view">
+            <field name="name">file_parsing.form.view</field>
+            <field name="model">file.parsing</field>
+            <field name="arch" type="xml">
+                <form string="All Documents form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='name'/>
+                                <field name="cig_list"/>
+                                <field name="cup_list"/>
+                                <field name="project_request_id_list"/>
+                                <field name="infr_order_list"/>
+                                <field name="framework_agreement_id_list"/>
+                                <field name="request_type_list"/>
+                                <field name="contact_referent_id_list"/>
+                                <field name="email_rel_list"/>
+                                <field name="pec_rel_list"/>
+                                <field name="joint_testing_list"/>
+                                <field name="is_quadrature_possible_list"/>
+                                <field name="business_developer_id_list"/>
+                                <field name="delivery_employee_id_list"/>
+                            </group>
+                            <group>
+                                <field name="project_request_id_purchase"/>
+                                <field name="infr_order_purchase"/>
+                                <field name="framework_agreement_id_purchase"/>
+                                <field name="sla_policy_id_rel_purchase"/>
+                                <field name="cig_purchase"/>
+                                <field name="cup_purchase"/>
+                                <field name="request_type_purchase"/>
+                                <field name="contact_referent_id_purchase"/>
+                                <field name="email_rel_purchase"/>
+                                <field name="pec_rel_purchase"/>
+                                <field name="phone_rel_purchase"/>
+                                <field name="joint_testing_purchase"/>
+                                <field name="expiration_date_purchase"/>
+                                <field name="actual_delivery_date_purchase"/>
+                                <field name="delivery_employee_id_purchase"/>
+                                <field name="works_director_id_purchase"/>
+                                <field name="execution_security_coordinator_id_purchase"/>
+                                <field name="design_safety_coordinator_id_purchase"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="Testo con Parsing">
+                                <field name="testo"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <record id="file_parsing_tree_view" model="ir.ui.view">
+            <field name="name">file.parsing.tree.view</field>
+            <field name="model">file.parsing</field>
+            <field name="arch" type="xml">
+                <tree string="All Documents tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+         
+    </data>
+</odoo>

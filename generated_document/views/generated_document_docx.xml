@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_generated_document_form" model="ir.ui.view">
+            <field name="name">document.template.form</field>
+            <field name="model">document.template</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                      <button name="button_generate_document" string="Generate Document" type="object" class="oe_highlight"/>
+                    </header>
+                  <group>
+                      <field name="name"/>
+                      <!-- Altri campi necessari -->
+                      <field name="template_id"/>
+                      <field name="template_file" widget="binary" filename="generated_document.docx" readonly="1"/>
+                  </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

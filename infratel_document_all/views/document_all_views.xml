@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ********************** MODELLO all.documents ********************** -->
+        <!-- form view -->
+        <record id="document_all_form_view" model="ir.ui.view">
+            <field name="name">document_all.form.view</field>
+            <field name="model">document.all</field>
+            <field name="arch" type="xml">
+                <form string="All Documents form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                        <notebook>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <record id="document_all_tree_view" model="ir.ui.view">
+            <field name="name">document.all.tree.view</field>
+            <field name="model">document.all</field>
+            <field name="arch" type="xml">
+                <tree string="All Documents tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+         
+    </data>
+</odoo>

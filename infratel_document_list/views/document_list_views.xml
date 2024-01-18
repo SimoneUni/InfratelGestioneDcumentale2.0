@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- ********************** MODELLO document.list ********************** -->
+
+        <!-- form view -->
+        <record id="document_list_form_view" model="ir.ui.view">
+            <field name="name">document.list.form.view</field>
+            <field name="model">document.list</field>
+            <field name="arch" type="xml">
+                <form string="Documents list form">
+                    <header>
+                        <button name='approva' string="Approva" type="object" class="btn-primary"/>
+                        <button name='indietro' string="Indietro" type="object" class="btn-primary"/>
+                        <!-- <field name="state_rel" widget="statusbar"/> -->
+                    </header> 
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="reference" readonly='1'/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <!-- fields relativi al sale.order-->
+                                <field name="phases_names_selection"/>
+                                <field name="configurazione_prova"/>
+                                <field name="associate_document"/>
+                                <field name="tipo_configurazione"/>
+                                <field name="is_sale" readonly='True' invisible='1'/>
+                                <field name="cig_list" invisible="is_sale == False"/>
+                                <field name="cup_list" invisible="is_sale == False"/>
+                                <field name="project_request_id_list" invisible="is_sale == False"/>
+                                <field name="infr_order_list" invisible="is_sale == False"/>
+                                <field name="framework_agreement_id_list" invisible="is_sale == False"/>
+                                <field name="request_type_list" invisible="is_sale == False"/>
+                                <field name="contact_referent_id_list" invisible="is_sale == False"/>
+
+                                <!-- fields relativi al purchase.order-->
+                                <field name ="is_purchase" readonly='True' invisible='1'/>
+                                <field name="project_request_id_purchase" invisible="is_purchase == False"/>
+                                <field name="infr_order_purchase" invisible="is_purchase == False"/>
+                                <field name="framework_agreement_id_purchase" invisible="is_purchase == False"/>
+                                <field name="sla_policy_id_rel_purchase" invisible="is_purchase == False"/>
+                                <field name="cig_purchase" invisible="is_purchase == False"/>
+                                <field name="cup_purchase" invisible="is_purchase == False"/>
+                                <field name="request_type_purchase" invisible="is_purchase == False"/>
+                                <field name="contact_referent_id_purchase" invisible="is_purchase == False"/>
+                            </group>
+                            <group>
+                            <!-- fields relativi al sale.order-->
+                                <field name="email_rel_list" invisible="is_sale == False"/>
+                                <field name="pec_rel_list" invisible="is_sale == False"/>
+                                <field name="phone_rel_list" invisible="is_sale == False"/>
+                                <field name="joint_testing_list" invisible="is_sale == False"/>
+                                <field name="is_quadrature_possible_list" invisible="is_sale == False"/>
+                                <field name="business_developer_id_list" invisible="is_sale == False"/>
+                                <field name="delivery_employee_id_list" invisible="is_sale == False"/>
+
+                                <!-- fields relativi al purchase.order-->
+                                <field name="email_rel_purchase" invisible="is_purchase == False"/>
+                                <field name="pec_rel_purchase" invisible="is_purchase == False"/>
+                                <field name="phone_rel_purchase" invisible="is_purchase == False"/>
+                                <field name="joint_testing_purchase" invisible="is_purchase == False"/>
+                                <field name="expiration_date_purchase" invisible="is_purchase == False"/>
+                                <field name="actual_delivery_date_purchase" invisible="is_purchase == False"/>
+                                <field name="delivery_employee_id_purchase" invisible="is_purchase == False"/>
+                                <field name="works_director_id_purchase" invisible="is_purchase == False"/>
+                                <field name="execution_security_coordinator_id_purchase" invisible="is_purchase == False"/>
+                                <field name="design_safety_coordinator_id_purchase" invisible="is_purchase == False"/>
+                                <!-- <field name="upload_file" invisible="state != 'draft'"/> -->
+                                <field name="download_file"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name='prova'>
+                                <!-- <field name="testo"/> -->
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <record id="document_list_tree_view" model="ir.ui.view">
+            <field name="name">document.list.tree.view</field>
+            <field name="model">document.list</field>
+            <field name="arch" type="xml">
+                <tree string="Documents List tree">
+                    <field name="reference"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+
+</odoo>

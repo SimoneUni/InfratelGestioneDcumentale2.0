@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <!-- <record id="action_your_report" model="ir.actions.act_window">
+            <field name="name">Nome Del Tuo Sottomenu</field>
+            <field name="model">sale.order</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale.view_order_form"/>
+            <field name="view_ids" eval="[(0, 0, {'view_id': ref('sale.view_order_form'), 'view_mode': 'form'})]"/>
+            <field name="view_type">form</field>
+            <field name="context">{'default_report_type': 'pdf'}</field>
+        </record> -->
+
+        
+
+        <!-- <record id="action_your_report" model="ir.actions.act_window">
+            <field name="name">Nome Del Tuo Report</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale.view_order_form"/>
+            <field name="context">{'default_report_type': 'pdf'}</field>
+        </record> -->
+
+    <!-- <record id="menu_your_submenu" model="ir.ui.menu">
+        <field name="name">Nome Del Tuo Sottomenu</field>
+        <field name="action" ref="action_your_report"/>
+        Puoi anche specificare un parent_id se desideri che sia un sotto-menu
+        <field name="parent_id" ref="menu_parent_id"/> 
+        Altri campi opzionali, come sequence, group_id, etc.
+    </record> -->
+
+    <!-- Genera un report -->
+
+
+    <!-- <record id="hello_report" model="ir.actions.report">
+        <field name="name">Report di prova</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">infratel_document_management.report_hello_template</field>
+        <field name="report_file">infratel_document_management.report_hello_template</field>
+        <field name="print_report_name">'StampaQui'</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record> -->
+    
+    <!-- Deve Generare un record -->
+
+        <!-- <record id="ciao_report_prova" model="ir.actions.act_window">
+            <field name="name">Report di prova</field>
+            <field name="model">sale.order</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale.model_sale_order"/>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">form</field>
+        </record> -->
+
+    <!-- <record id="action_invoice_order_generate_link" model="ir.actions.act_window">
+        <field name="name">Generate a Payment Link</field>
+        <field name="res_model">payment.link.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="payment.payment_link_wizard_view_form"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_account_move"/>
+        <field name="binding_view_types">form</field>
+    </record> -->
+ 
+
+ <!-- Questo permette di collegarsi all tipo di form per la creazione del document.all -->
+        <record id="action_sale_order_prova" model="ir.actions.act_window">
+            <field name="name">Documenti</field>
+            <field name="res_model">document.all</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="infratel_document_all.document_all_tree_view"/>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">form</field>
+        </record>
+
+<!--- Creazione sottomenu nel tasto_ir -->
+        <!-- <record id="menu_document_management_actions_daje" model="ir.ui.menu">
+            <field name="name">Document Management</field>
+            <field name="sequence" type="int">10</field> -->
+            
+            <!-- <field name="parent_id" ref=" NON HO UN ID"/> -->
+            <!-- <field name="action" ref="action_sale_order_prova"/>
+        </record> -->
+
+        
+
+    </data>
+</odoo>

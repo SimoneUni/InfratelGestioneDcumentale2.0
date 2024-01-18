@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+       <!-- ********************** MODELLO document.lines ********************** -->
+
+        
+
+        <!-- tree view -->
+        <record id="view_tree_document_lines" model="ir.ui.view">
+            <field name="name">document.lines.tree</field>
+            <field name="model">document.lines</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="phases_id"/>
+                    <field name="approvers_id"/>
+                    <!-- <field name="approver_id"/> -->
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

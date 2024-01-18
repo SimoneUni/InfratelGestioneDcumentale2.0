@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="wizard_sale_route_action" model="ir.actions.act_window">
+            <field name="name">wix</field>
+            <field name="res_model">wizard.sale</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+
+        <menuitem id="wizard_sale_view_menu"
+            name="Wizard"
+            action="wizard_sale_route_action"
+            sequence="2"/>
+
+        <record id="wizard_sale_form_view" model="ir.ui.view">
+            <field name="name">wizard.sale.form.view</field>
+            <field name="model">wizard.sale</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="cat_document"/>
+                            <field name="categoria_documento" invisible="cat_document == False"/>
+                            <field name="yaaa" invisible="categoria_documento == False"/>
+                        </group>
+                        <group>
+                            <button string="Genera" class="oe_highlight" type="object" name="generate_documents"/>
+                        </group>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
+
+        

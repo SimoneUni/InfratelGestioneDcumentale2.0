@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    <!-- ******************************* ACTIONS ******************************* -->
+
+        <!-- document.configuration action -->
+        <record id="document_configuration_route_action" model="ir.actions.act_window">
+            <field name="name">Configurazione documenti</field>
+            <field name="res_model">document.configuration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="generated_documents_route_action" model="ir.actions.act_window">
+            <field name="name">Categorie di documenti</field>
+            <field name="res_model">generated.documents</field>
+            <field name="view_mode">tree,form</field>
+        </record> 
+
+    <!-- ******************************* MENU ******************************* -->
+
+        <!-- Configurazione - menu (livello 1) -->
+        <menuitem id="configuration_menu"
+            name="Configurazione"
+            parent="infratel_document_list.document_list_menu"
+            sequence="2"/>
+        
+        <!-- Configuratore - menu (livello 2) -->
+
+        <menuitem id="document_configuration_view_menu"
+            name="Configuratore"
+            parent="configuration_menu"
+            action="document_configuration_route_action"
+            sequence="1"/>
+        
+        <!-- Categoria documenti - menu (livello 2) -->
+
+        <menuitem id="generated_documents_menu"
+            name="Categorie documenti"
+            action="generated_documents_route_action"
+            parent="configuration_menu"
+            sequence="4"/>
+
+            
+       
+        
+    </data>
+</odoo>
